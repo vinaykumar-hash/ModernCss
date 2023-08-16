@@ -1,40 +1,52 @@
+"use client"
 import React from 'react'
 import { useEffect,useState } from 'react';
 import CopyToClipboard from 'react-copy-to-clipboard'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { dracula } from "react-syntax-highlighter/dist/esm/styles/hljs";
-
+import { custompage } from './GetIteminside';
 const Iteminsidecode = (name) => {
   let [HtmlCode,NewHtmlCode] = useState("")
   let [CssCode,NewCssCode] = useState("")
   let [JsCode,NewJsCode] = useState("")
-  async function TestFunction(name){
-    let res = await fetch("/api/getstyle?"+name,{
-      method:"GET"
-    })
-    let data = await res.json()
-    // alert(data[0].html)
-    // let [HtmlCode] = useState(data[0].html)
-    NewHtmlCode(data[0].html);
-    NewCssCode(data[0].css);
-    NewJsCode(data[0].javascript);
+  useEffect(()=>{
+    async function FillCode(name){
+      let data = await custompage(name)
+      NewHtmlCode(data.html);
+      NewCssCode(data.css);
+      NewJsCode(data.javascript);
+    }
+    FillCode(name)
+  },[])
+
+
+  async function TestFunction(data){
+    // let Success = 0
+    // while(Success<=4){
+    //   try{
+    //     let data = await custompage(name)
+    //     Success = 5
+    //     console.log("-----------------Success-------------")
+        // NewHtmlCode(data.html);
+        // NewCssCode(data.css);
+        // NewJsCode(data.javascript);
+    //   }catch(err){
+    //     Success++
+    //     console.log("-----------------Failed-------------")
+    //   }
+    // }
+    console.log("-------------------------")
+    // NewHtmlCode(data.html);
+    // NewCssCode(data.css);
+    // NewJsCode(data.javascript);
+    // let res = await fetch("/api/getstyle?"+name,{
+    //   method:"GET"
+    // })
+
   }
-  TestFunction(name)
-  // alert(testcode)
-  
-  // useEffect(()=>{
-  //   window.onload = function(){
-  //     let HtmlCode = document.querySelector(".html").textContent
-  //     alert(HtmlCode)
-  //   }
-    
-  // },[])
-  // window.onload = function(){
-  //   alert(document.querySelector(".css").textContent)
-  //   console.log(document.querySelector(".css").textContent)
-  // }
-  // let [HtmlCode] = useState(document.querySelector(".css").textContent)
-  // let code = "<div></div>";
+  // alert(document.querySelector(".hiddenelement").textContent)
+
+  // TestFunction(data)
   return (
     <div className='w-screen h-auto flex justify-evenly items-center mt-20 bg-primary-300 pt-20 flex-col px-10 gap-20 pb-10'>
         <div className='w-full'>
