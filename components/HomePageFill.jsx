@@ -5,7 +5,7 @@ const HomePageFill = () => {
     useEffect(()=>{
         function navigateToSpecRoute(name) {
             window.location.href = "/customstyle/"+name;
-          }
+        }
         async function fillpage(){
             let res = await fetch("/api/db_connect?LiveUi",{
                 method:"GET"
@@ -63,7 +63,6 @@ const HomePageFill = () => {
                 document.head.appendChild(styleElement);
                 eval(js_code)
             })
-            
         }
         fillpage()
     },[])

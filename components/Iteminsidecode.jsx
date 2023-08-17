@@ -18,35 +18,6 @@ const Iteminsidecode = (name) => {
     }
     FillCode(name)
   },[])
-
-
-  async function TestFunction(data){
-    // let Success = 0
-    // while(Success<=4){
-    //   try{
-    //     let data = await custompage(name)
-    //     Success = 5
-    //     console.log("-----------------Success-------------")
-        // NewHtmlCode(data.html);
-        // NewCssCode(data.css);
-        // NewJsCode(data.javascript);
-    //   }catch(err){
-    //     Success++
-    //     console.log("-----------------Failed-------------")
-    //   }
-    // }
-    console.log("-------------------------")
-    // NewHtmlCode(data.html);
-    // NewCssCode(data.css);
-    // NewJsCode(data.javascript);
-    // let res = await fetch("/api/getstyle?"+name,{
-    //   method:"GET"
-    // })
-
-  }
-  // alert(document.querySelector(".hiddenelement").textContent)
-
-  // TestFunction(data)
   return (
     <div className='w-screen h-auto flex justify-evenly items-center mt-20 bg-primary-300 pt-20 flex-col px-10 gap-20 pb-10'>
         <div className='w-full'>
@@ -58,7 +29,7 @@ const Iteminsidecode = (name) => {
         <SyntaxHighlighter language="html" style={dracula} children={HtmlCode} className="rounded-lg html text-left w-full">
             
         </SyntaxHighlighter></code>
-        {/* <pre className=' code w-full h-80 bg-black rounded-lg  text-white overflow-scroll px-2 py-2 text-sm'><code className='html'></code></pre> */}
+        
         </div>
         <div className='w-full'>
         <h1 className='text-cyan-500 text-2xl font-semibold mb-2'>Css</h1>
@@ -69,7 +40,7 @@ const Iteminsidecode = (name) => {
         <SyntaxHighlighter language="css" style={dracula} children={CssCode} className="rounded-lg text-left w-full">
             
         </SyntaxHighlighter></code>
-        {/* <pre className=' code w-full h-80 bg-black rounded-lg  text-white overflow-scroll px-2 py-2 text-sm'><code className='css'></code></pre> */}
+        
         </div>
         <div className='w-full'>
         <h1 className='text-red-500 text-2xl font-semibold mb-2'>Javascript</h1>
@@ -80,7 +51,7 @@ const Iteminsidecode = (name) => {
         <SyntaxHighlighter language="javascript" style={dracula} children={JsCode} className="rounded-lg text-left w-full">
             
         </SyntaxHighlighter></code>
-        {/* <pre className=' code w-full h-80 bg-black rounded-lg  text-white overflow-scroll px-2 py-2 text-sm'><code className='js'></code></pre> */}
+        
         </div>
     </div>
 

@@ -6,15 +6,19 @@ const NavBar = () => {
     window.location.href = "/customstyle/"+name;
   }
   function navigateToSearchRoute() {
-    window.location.href = "/searchitems/"+document.querySelector(".searchtext").value;
+    if(!document.querySelector(".searchtext").value.length == 0){
+      window.location.href = "/searchitems/"+document.querySelector(".searchtext").value;
+    }
+    
   }
   async function SearchItem(){
     let SearchItem = document.querySelector(".searchtext").value
-    if(SearchItem == ""){
+    if(SearchItem.length == 0){
       document.querySelector(".SearchResults").style.opacity = "0"
       document.querySelector(".SearchResults").style.top = "0rem"
     }else{
-    let res = await fetch("/api/searchitem?"+SearchItem,{
+    let encodedSearchItem = encodeURIComponent(SearchItem);
+    let res = await fetch(`/api/searchitem?query=${encodedSearchItem}`,{
       method:"GET"
     })
     let data = await res.json()

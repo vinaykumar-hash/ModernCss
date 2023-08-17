@@ -1,7 +1,8 @@
 import { SearchResult } from "@/utils/cstyles"
 export async function GET(request) {
-    let cname = request.nextUrl.search.replace("?","")
     try{
+        // let cname = request.nextUrl.search.replace("?","")
+        let cname = request.nextUrl.searchParams.get("query");
         const {cstyles , error} = await SearchResult(cname)
         if(error) throw new Error(error)
         let StyleNames = []
@@ -9,7 +10,10 @@ export async function GET(request) {
             let style = [cstyles[i].name,cstyles[i].category]
             StyleNames.push(style)
         }
-        return new Response(JSON.stringify(StyleNames))
+        return new Response(JSON.stringify(StyleNames), {
+            status: 200,
+            headers: { "Content-Type": "application/json" }
+          })
         // return cstyles
     }catch(error){
         return new Response({error:error.message})

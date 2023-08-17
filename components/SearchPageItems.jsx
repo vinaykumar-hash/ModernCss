@@ -3,9 +3,14 @@ import React from 'react'
 
 const SearchPageItems = (SearchName) => {
   async function GetSearchItems(name){
-    let res = await fetch("/api/searchitem?"+name,{
+    let res;
+    try{
+    res = await fetch(`/api/searchitem?query=${name}`,{
       method:"GET"
-    })
+    })}catch(err){
+      // Placeholder: Do nothing
+    }
+    if(res){
     let data = await res.json()
     let ItemsCategory = []
     data.forEach((el)=>{
@@ -42,8 +47,7 @@ const SearchPageItems = (SearchName) => {
           //       eval(js_code)
         }
       })
-    })
-
+    })}
   }
   async function fillItem(name,ClassToAdd){
     let elementRes = await fetch("/api/getstyle?"+name)
