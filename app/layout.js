@@ -12,6 +12,7 @@ export default function RootLayout({children}) {
   
   return (
     <html>
+      <title>ModernCSS</title>
       <head>
 
       </head>
