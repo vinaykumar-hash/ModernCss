@@ -69,3 +69,27 @@ export async function SearchResult(name){
         return {error:"failed to fetch testdata"}
     }
 }
+export async function AddDesign(name,background,category,Html,Css,Js){
+    try{
+        if (!cstyles) await init()
+        // let UniqueName = await cstyles.distinct("uniquename")
+        let InitialUniqueName = name+"ID";
+        let DesignData = {
+            "name":name,
+            "uniquename":name+"ID",
+            "html":Html,
+            "css":Css,
+            "javascript":Js,
+            "background":background,
+            "category":category
+        }
+        let p = await cstyles.insertOne(DesignData);
+        if(p.acknowledged){
+            return true
+        }else{
+            return false
+        }
+    }catch(error){
+        console.log(error)
+    }
+}
