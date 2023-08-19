@@ -81,7 +81,7 @@ const SearchPageItems = (SearchName) => {
     <div className='SearchPageContainer px-8 w-full capitalize'>
       <div className='SearchResultTitle flex justify-start py-4 items-center'>
         <h1 className=''>Search Result For - </h1>
-        <h1 className='bg-blue-900 text-white pl-1 pr-2 pt-1'>" {SearchName} "</h1>
+        <h1 className='bg-navbarColor-400 text-gray-800 pl-1 pr-2 pt-1'>" {SearchName} "</h1>
       </div>
       {/* <h1 className='text-2xl font-semibold px-4'>Button</h1>
       <div className='ButtonItemsContainer h-8 w-full'>

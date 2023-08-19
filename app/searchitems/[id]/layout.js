@@ -11,7 +11,7 @@ export default function Page({params}){
             <div className="w-screen h-screen flex justify-center items-center sm:flex-row flex-col">
                 <Category/>
                 <Categoryfill/>
-                <div className="w-full h-screen">
+                <div className="w-full h-screen text-navbarColor-400">
                     <div>{SearchPageItems(params.id)}</div>
                 </div>
             </div>

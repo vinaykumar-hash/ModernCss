@@ -151,7 +151,7 @@ export default function(){
         <div>
         <NavBar/>
         <div className="DesignSubmitForm flex justify-center items-center flex-col w-screen text-start px-20 transition-all">
-            <h1 className="w-full text-4xl font-bold text-navbarColor-100 mt-10">Submit Your Design</h1>
+            <h1 className="w-full text-4xl font-bold text-navbarColor-400 mt-10">Submit Your Design</h1>
             <p className="w-full text-sm font-normal text-red-600">Note - This Feature Is For Admin Only</p>
             <div className="CodeSpace w-full text-2xl mt-10">
                 <div>
@@ -168,7 +168,7 @@ export default function(){
                 </div>
             </div>
             <div className="flex justify-center items-center mb-40 gap-4">
-                <button className="TestButton text-xl font-semibold rounded-lg bg-green-300 text-green-900 px-8 py-1">Test</button>
+                <button className="TestButton text-xl font-semibold rounded-lg bg-green-300 text-green-900 px-8 py-1 shadow-navbarColor-400">Test</button>
                 <button className="FinalSubmitButton text-xl font-semibold rounded-lg bg-blue-900 text-white px-8 py-1">Submit</button>
             </div>
         </div>

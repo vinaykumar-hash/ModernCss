@@ -4,7 +4,7 @@ const Iteminside = (name) => {
     <div className='w-full h-1/3 flex justify-center items-center sm:flex-row flex-col px-10 sm:gap-20 gap-10 mt-20'>
         <div className='ActiveElement sm:w-1/5 w-full h-40 rounded-lg flex justify-center items-center'></div>
         <div>
-          <h1 className='mod_name text-2xl font-semibold'></h1>
+          <h1 className='mod_name text-2xl font-semibold text-navbarColor-400'></h1>
           <div className='LangPercentage w-40 h-2 flex'>
             <div className='html_split bg-orange-500 h-full rounded-l-lg'></div>
             <div className='css_split bg-cyan-500  h-full'></div>

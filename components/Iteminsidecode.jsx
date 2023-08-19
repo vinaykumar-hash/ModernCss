@@ -19,7 +19,7 @@ const Iteminsidecode = (name) => {
     FillCode(name)
   },[])
   return (
-    <div className='w-screen h-auto flex justify-evenly items-center mt-20 bg-primary-300 pt-20 flex-col px-10 gap-20 pb-10'>
+    <div className='w-screen h-auto flex justify-evenly items-center mt-20 bg-gray-950 pt-20 flex-col px-10 gap-20 pb-10'>
         <div className='w-full'>
         <h1 className='text-orange-500 text-2xl font-semibold mb-2'>Html</h1>
         <code className='bg-primary-500 rounded-lg flex flex-col items-end'>

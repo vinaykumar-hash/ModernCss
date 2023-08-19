@@ -14,7 +14,7 @@ export default function Page({ params }) {
                 <Category/>
                 <Categoryfill/>
                 <div className="w-full h-full p-4">
-                    <h1 className="font-semibold text-2xl tracking-wide sm:mx-4 mx-4 mb-4 capitalize">{params.id}</h1>
+                    <h1 className="font-semibold text-2xl tracking-wide sm:mx-4 mx-4 mb-4 text-navbarColor-400 capitalize">{params.id}</h1>
                     <div className="CategoryPageItemsContainer w-full h-auto px-4 py-2 flex gap-2 flex-wrap overflow-scroll">
                         
                     </div>

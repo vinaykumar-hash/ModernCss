@@ -11,7 +11,7 @@ const Categoryfill = () => {
             let category = document.querySelector(".category")
             data.forEach((ele)=>{
                 let new_category = document.createElement("div")
-                new_category.classList.add("capitalize","hover:bg-primary-400","pl-6","py-2","categories","font-semibold","text-sm","opacity-80","cursor-pointer","hover:opacity-100","transition-all","sm:block","hidden","hover:text-navbarColor-100")
+                new_category.classList.add("text-navbarColor-400","capitalize","hover:bg-primary-400","pl-8","py-2","categories","font-semibold","text-sm","opacity-80","cursor-pointer","hover:opacity-100","transition-all","sm:block","hidden","hover:text-navbarColor-100")
                 new_category.textContent = ele
                 new_category.onclick = () => navigateToCatRoute(ele);
                 category.appendChild(new_category)
