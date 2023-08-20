@@ -48,7 +48,7 @@ const HomePageFill = () => {
                 let js_code = ele.javascript
                 let new_style = document.createElement("div")
                 new_style.onclick = () => navigateToSpecRoute(name);
-                new_style.classList.add(unique_class,"homepage_item", "sm:w-1/4","w-1/2", "h-full", "rounded-lg", "transition-all","py-auto","flex","justify-center","items-center")
+                new_style.classList.add(unique_class,"homepage_item", "sm:w-1/4","w-1/2", "h-full", "rounded-lg", "transition-all","py-auto","flex","justify-center","items-center","relative","overflow-hidden")
                 new_style.style.background = background
                 document.querySelector(".Homepagecat2_container").appendChild(new_style)
                 document.querySelector("."+unique_class).innerHTML += html_code

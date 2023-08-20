@@ -24,7 +24,7 @@ const SearchPageItems = (SearchName) => {
       NewItemCategory.classList.add("text-2xl","font-semibold","my-4")
       document.querySelector(".SearchPageContainer").appendChild(NewItemCategory)
       let ItemsContainer = document.createElement("div")
-      ItemsContainer.classList.add("w-full",el+"container")
+      ItemsContainer.classList.add("w-full",el+"container","flex","justify-start","items-center","gap-4")
       document.querySelector(".SearchPageContainer").appendChild(ItemsContainer)
       data.forEach((ChildElement)=>{
         if(ChildElement[1]==el){
@@ -58,7 +58,7 @@ const SearchPageItems = (SearchName) => {
     let js_code = data[0].javascript
     let new_style = document.createElement("div")
     new_style.onclick = () => navigateToSpecRoute(name);
-    new_style.classList.add(unique_class, "sm:w-1/4","w-1/2", "h-20", "rounded-lg", "transition-all","hover:shadow-lg","py-auto","flex","justify-center","items-center")
+    new_style.classList.add(unique_class, "sm:w-1/4","w-1/2", "h-40", "rounded-lg", "transition-all","hover:shadow-lg","py-auto","flex","justify-center","items-center","relative","overflow-hidden")
     new_style.style.background = data[0].background
     document.querySelector("."+ClassToAdd).appendChild(new_style)
     document.querySelector("."+unique_class).innerHTML += html_code
