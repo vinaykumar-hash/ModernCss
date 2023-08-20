@@ -15,7 +15,7 @@ export default function(){
         })
         document.querySelector(".FinalSubmitCross").addEventListener("click",function(){
             document.querySelector(".DesignSubmitForm").style.filter = "brightness(1)"
-            document.querySelector(".DesignSubmitForm").style.background = "white"
+            document.querySelector(".DesignSubmitForm").style.background = ""
             document.querySelector(".FinalSubmit").classList.add("hidden")
         })
         document.querySelector(".TestButton").addEventListener("click",function(){
@@ -48,7 +48,7 @@ export default function(){
         })
         document.querySelector(".TestCross").addEventListener("click",function(){
             document.querySelector(".DesignSubmitForm").style.filter = "brightness(1)"
-            document.querySelector(".DesignSubmitForm").style.background = "white"
+            document.querySelector(".DesignSubmitForm").style.background = ""
             if (dynamicScript) {
                 document.body.removeChild(dynamicScript);}
             document.querySelector(".CodePreview").classList.remove("flex")

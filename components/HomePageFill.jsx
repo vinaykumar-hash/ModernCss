@@ -7,7 +7,7 @@ const HomePageFill = () => {
             window.location.href = "/customstyle/"+name;
         }
         async function fillpage(){
-            let res = await fetch("/api/db_connect?LiveUi",{
+            let res = await fetch("/api/db_connect?Cursor",{
                 method:"GET"
             })
             let items = await res.json()
@@ -20,7 +20,7 @@ const HomePageFill = () => {
                 let js_code = ele.javascript
                 let new_style = document.createElement("div")
                 new_style.onclick = () => navigateToSpecRoute(name);
-                new_style.classList.add(unique_class,"homepage_item", "sm:w-1/4","w-1/2", "h-full", "rounded-lg", "transition-all","hover:shadow-md","py-auto","flex","justify-center","items-center","hover:shadow-navbarColor-400")
+                new_style.classList.add(unique_class,"homepage_item", "sm:w-1/4","w-1/2", "h-full", "rounded-lg", "transition-all","py-auto","flex","justify-center","items-center")
                 new_style.style.background = background
                 document.querySelector(".Homepagecat1_container").appendChild(new_style)
                 document.querySelector("."+unique_class).innerHTML += html_code
@@ -35,7 +35,7 @@ const HomePageFill = () => {
                 document.head.appendChild(styleElement);
                 eval(js_code)
             })
-            let resButton = await fetch("/api/db_connect?button",{
+            let resButton = await fetch("/api/db_connect?LoadingBar",{
                 method:"GET"
             })
             let itemsButton = await resButton.json()
@@ -48,7 +48,7 @@ const HomePageFill = () => {
                 let js_code = ele.javascript
                 let new_style = document.createElement("div")
                 new_style.onclick = () => navigateToSpecRoute(name);
-                new_style.classList.add(unique_class,"homepage_item", "sm:w-1/4","w-1/2", "h-full", "rounded-lg", "transition-all","hover:shadow-md","py-auto","flex","justify-center","items-center","hover:shadow-navbarColor-400")
+                new_style.classList.add(unique_class,"homepage_item", "sm:w-1/4","w-1/2", "h-full", "rounded-lg", "transition-all","py-auto","flex","justify-center","items-center")
                 new_style.style.background = background
                 document.querySelector(".Homepagecat2_container").appendChild(new_style)
                 document.querySelector("."+unique_class).innerHTML += html_code
