@@ -15,7 +15,7 @@
     "fs": "^0.0.1-security",
     "highlight.js": "^11.8.0",
     "mongodb": "^5.7.0",
-    "next": "13.4.13",
+    "next": "^13.4.13",
     "postcss": "8.4.27",
     "react": "18.2.0",
     "react-copy-to-clipboard": "^5.1.0",

@@ -10,7 +10,8 @@ async function init() {
         db = await client.db()
         cstyles = await db.collection("customstyle")
     }catch(error){
-        throw new Error("Failed to connect to database")
+        // throw new Error("Failed to connect to database")
+        throw new Error(error)
     }
     
 }

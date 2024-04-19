@@ -15,6 +15,7 @@ const Iteminsidecode = (name) => {
       NewHtmlCode(data.html);
       NewCssCode(data.css);
       NewJsCode(data.javascript);
+      // alert(data.html)
     }
     FillCode(name)
   },[])

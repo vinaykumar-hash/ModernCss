@@ -18,6 +18,7 @@ const HomePageFill = () => {
                 let html_code = ele.html
                 let css_code = ele.css
                 let js_code = ele.javascript
+                // alert(ele.html)
                 let new_style = document.createElement("div")
                 new_style.onclick = () => navigateToSpecRoute(name);
                 new_style.classList.add(unique_class,"homepage_item", "sm:w-1/4","w-1/2", "h-full", "rounded-lg", "transition-all","py-auto","flex","justify-center","items-center")
